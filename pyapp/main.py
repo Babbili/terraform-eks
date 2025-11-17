@@ -1,10 +1,12 @@
 from flask import Flask
 import logging
+from logger import init_logging
 
 app = Flask(__name__)
 
 
 def main():
+    init_logging()
     log = logging.getLogger('root')
 
     log.debug("Logging is configured.")
